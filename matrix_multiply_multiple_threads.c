@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <pthread.h>
-#define NUM_THREADS	3
+ int NUM_THREADS;
  int mat1[10][10];
  int mat2[10][10];
  int mat3[10][10];
@@ -11,15 +11,25 @@
 
  int main(int argc, char const *argv[])
  {
- 	pthread_t tid[NUM_THREADS];
  	int i,j,k;
  	long t;
+
+ 	printf("Enter number of threads: ");
+scanf("%d",&NUM_THREADS);
+
+ 	pthread_t tid[NUM_THREADS];
+
+ 	
+ 	
+ 	
 
  	printf("Enter no. of rows for matrix-1: ");
  	scanf("%d",&r1);
 
  	printf("Enter no. of cols for matrix-1: ");
  	scanf("%d",&c1);
+
+ 	
 
 
  	for (i = 0; i < r1; i++)
@@ -75,6 +85,8 @@
 			printf("\n");
 		
  	}
+ 	
+
  	if(c1!=r2)
  	{
  		printf("Matrix can not be multiplied.\n");
